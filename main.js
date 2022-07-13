@@ -1,4 +1,5 @@
 const buttonRegister = document.getElementById('button-register');
+const feedbackArea = document.getElementById('feedback-area');
 const formDataArea = document.getElementById('form-data');
 const formPageArea = document.getElementById('form-page');
 
@@ -28,13 +29,14 @@ const formData = [
 function createListElement(question, answer) {
   const liElement = document.createElement('li');
   liElement.innerHTML = `
-    <span class="question-span">${question}</span>
-    <span class="answer=span">${answer}</span>
+    <strong>${question}</strong>
+    <span>${answer}</span>
   `;
   return liElement;
 }
 
 function deleteMainPageContent() {
+  feedbackArea.classList.remove('hidden');
   formPageArea.remove();
 }
 

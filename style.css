@@ -90,3 +90,11 @@ footer {
   padding: 2rem;
   font-weight: 700;
 }
+
+.hidden {
+  display: none;
+}
+
+#form-data li {
+  margin-bottom: 1rem;
+}
