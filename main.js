@@ -3,29 +3,6 @@ const feedbackArea = document.getElementById('feedback-area');
 const formDataArea = document.getElementById('form-data');
 const formPageArea = document.getElementById('form-page');
 
-const formData = [
-  {
-    question: 'Nome Completo',
-    answer: 'Gru Segundo',
-  },
-  {
-    question: 'E-mail',
-    answer: 'teste@teste.com',
-  },
-  {
-    question: 'Nivel de Malvadeza',
-    answer: '10',
-  },
-  {
-    question: 'Filme Favorito',
-    answer: 'Minions 2',
-  },
-  {
-    question: 'Descrição',
-    answer: 'Donec turpis magna, vestibulum sed vehicula sed, congue in mi. Etiam rutrum nibh quis ex sagittis porttitor. Maecenas tempor lacus lacus, non venenatis tortor sodales in. Maecenas a dolor feugiat, condimentum diam sit amet, fermentum dui. Sed non augue nec velit ullamcorper vulputate ',
-  },
-];
-
 function createListElement(question, answer) {
   const liElement = document.createElement('li');
   liElement.innerHTML = `
@@ -40,9 +17,7 @@ function deleteMainPageContent() {
   formPageArea.remove();
 }
 
-function renderFormData(event) {
-  event.preventDefault();
-
+function renderFormData(formData) {
   deleteMainPageContent();
 
   for (let i = 0; i < formData.length; i += 1) {
@@ -54,4 +29,41 @@ function renderFormData(event) {
   }
 }
 
-buttonRegister.addEventListener('click', renderFormData);
+// Divisão
+
+function pegarInfo(e) {
+  e.preventDefault();
+  // pegar inputs e tags form
+  const name = document.getElementById('name');
+  const lastname = document.getElementById('lastname');
+  const email = document.getElementById('email');
+  const movie = document.getElementById('movie');
+  const radio2 = document.querySelector('input[name = "evil-rate"]:checked');
+  const about = document.getElementById('about');
+
+  const objeto = [
+    {
+      question: 'Nome Completo',
+      answer: `${name.value} ${lastname.value}`,
+    },
+    {
+      question: 'E-mail',
+      answer: email.value,
+    },
+    {
+      question: 'Nivel de Malvadeza',
+      answer: radio2.parentElement.innerText,
+    },
+    {
+      question: 'Filme Favorito',
+      answer: movie.value,
+    },
+    {
+      question: 'Descrição',
+      answer: about.value,
+    },
+  ];
+  renderFormData(objeto);
+}
+
+buttonRegister.addEventListener('click', pegarInfo);
