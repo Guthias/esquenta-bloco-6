@@ -23,7 +23,7 @@
     </form>
   </header>
 
-  <main>
+  <main id="form-page">
     <form class="main-column">
       <div class="form-row">
         <label>
@@ -99,15 +99,12 @@
       <div class="form-row">
         <label>
           Conte-nos mais sobre você
-          <<<<<<< HEAD <textarea id="about"></textarea>
-            =======
-            <textarea class="form-textarea"></textarea>
-            >>>>>>> cdea1219846164f547986ddbf5a67534e042d628
+          <textarea id="about" class="form-textarea"></textarea>
         </label>
       </div>
 
       <div>
-        <button type="submit" id="button">Enviar</button>
+        <button type="submit" id="button-register">Enviar</button>
       </div>
     </form>
 
@@ -116,7 +113,17 @@
     </div>
   </main>
 
+  <main id="feedback-area" class="hidden">
+    <div class="main-column">
+      <h2>Obrigado por se inscrever</h2>
+      <ul id="form-data"></ul>
+    </div>
+    <div class="main-column">
+      <img src="images/minions-2.png" alt="" />
+    </div>
+  </main>
   <footer>VillainMinions™</footer>
+  <script src="main.js"></script>
 </body>
 <script src="./main.js"></script>
 
