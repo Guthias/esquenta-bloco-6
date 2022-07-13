@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+body,
+html {
+  height: 100%;
+}
+
 header {
   background-color: #FCE209;
   display: flex;
@@ -23,4 +28,65 @@ header {
 
 .column h1 {
   font-size: 2rem;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  /* margin-top: 3rem; */
+}
+
+.main-column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5em;
+  padding: 0 6em;
+}
+
+.main-column img {
+  width: 80%;
+  height: 80%;
+  object-fit: contain;
+}
+
+.column-row {
+  flex-direction: column;
+}
+
+.form-row {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+
+.form-row label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-row input {
+  width: 100%;
+}
+
+.radio-area label {
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 0;
+}
+
+.form-textarea {
+  resize: none;
+  width: 100%;
+  height: 10em;
+}
+
+footer {
+  text-align: center;
+  background-color: #FCE209;
+  padding: 2rem;
+  font-weight: 700;
 }

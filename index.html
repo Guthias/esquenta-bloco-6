@@ -24,8 +24,8 @@
   </header>
 
   <main>
-    <form>
-      <div>
+    <form class="main-column">
+      <div class="form-row">
         <label>
           Nome
           <input type="text" id="name" />
@@ -37,14 +37,14 @@
         </label>
       </div>
 
-      <div>
+      <div class="form-row">
         <label>
           E-mail
           <input type="email" id="email" />
         </label>
       </div>
 
-      <div>
+      <div class="form-row">
         <label>
           Qual o seu filme Favorito?
           <select id="movie">
@@ -53,7 +53,7 @@
         </label>
       </div>
 
-      <div id="radio">
+      <div id="radio" class="form-row radio-area">
         <label>
           1
           <input name="evil-rate" type="radio" id="bad-1">
@@ -96,10 +96,13 @@
         </label>
       </div>
 
-      <div>
+      <div class="form-row">
         <label>
           Conte-nos mais sobre você
-          <textarea id="about"></textarea>
+          <<<<<<< HEAD <textarea id="about"></textarea>
+            =======
+            <textarea class="form-textarea"></textarea>
+            >>>>>>> cdea1219846164f547986ddbf5a67534e042d628
         </label>
       </div>
 
@@ -108,7 +111,7 @@
       </div>
     </form>
 
-    <div>
+    <div class="main-column">
       <img src="images/minions-1.jpg" alt="" />
     </div>
   </main>
@@ -116,4 +119,5 @@
   <footer>VillainMinions™</footer>
 </body>
 <script src="./main.js"></script>
+
 </html>

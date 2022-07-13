@@ -19,7 +19,7 @@ function pegarInfo (e) {
     filme_favorito: movie.value,
     malvadeza: radio2.parentElement.innerText,
     sobre_mim: about.value,
-  }
+  };
   return objeto;
 }
 
