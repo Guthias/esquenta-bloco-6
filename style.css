@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #FCE209;
+  display: flex;
+  padding: 0.5rem 2rem;
+  justify-content: space-between;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+}
+
+.column img {
+  object-fit: contain;
+  width: 3rem;
+  height: 4.4rem;
+}
+
+.column h1 {
+  font-size: 2rem;
+}
